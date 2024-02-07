@@ -1,0 +1,128 @@
+/* import font */
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap&effect=3d');
+@import url('https://fonts.googleapis.com/css2?family=Chonburi&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Chonburi&display=swap');
+
+/* general and background styles.css */
+/* styles.css */
+header h1 {
+  margin-top: 10vh;
+  color: white;
+  font-size: 85px;
+  font-family: 'Bungee Shade', cursive;
+  font-family: 'Chonburi', cursive;
+  text-shadow: 1px 4px 4px rgba(0, 0, 0, 0.9);
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  margin: 0;
+  background-image: url("/static/images/login.gif");
+  background-repeat: repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+/* button styles.css */
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.button-LogSig {
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 10px;
+  width: 120px;
+  font-family: 'DM Serif Display', serif;
+  font-size: 17px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.5), 1px 1px 1px rgba(255, 255, 255, 0.5);
+  transition: box-shadow 0.3s;
+  opacity: 0.70;
+}
+
+button:hover {
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
+}
+
+.form-container {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  font-size: 12px;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border-radius: 3px;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.85);
+  width: 300px;
+  font-family: 'DM Serif Display', serif;
+}
+
+/* Make the icons black */
+.fa {
+  color: black;
+}
+
+.closeFormBtn {
+  position: absolute;
+  top: 1px;
+  right: 1px;
+  border: none;
+  background-color: white;
+  cursor: pointer;
+  width: 29px;
+  height: 29px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: box-shadow 0.3s;
+  font-size: 20px;
+}
+
+.submitBtn {
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 10px;
+  width: 250px;
+  font-family: 'DM Serif Display', serif;
+  font-size: 15px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.5), 1px 1px 1px rgba(255, 255, 255, 0.5);
+  transition: box-shadow 0.3s;
+  opacity: 0.90;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+input {  
+  display: block;
+  width: 250px;
+  margin-bottom: 10px;
+}
+
+.input-1 {  
+  margin-top: 5px;
+}
+
+#submissionError {
+  font-size: 10px; 
+  color:red; 
+  display:none;
+}

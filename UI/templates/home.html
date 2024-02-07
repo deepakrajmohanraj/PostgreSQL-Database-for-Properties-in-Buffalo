@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .form-element {
+            display: inline-block;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+<script>window.onload = function() {
+    // Make an AJAX request to the server to get the dropdown options
+    var xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState == 4 && xhr.status == 200) {
+            // Parse the response and set the dropdown options
+            var dropdown = document.getElementsByName("dropdown3")[0];
+            dropdown.innerHTML = xhr.responseText;
+        }
+    };
+    xhr.open("GET", "/get_table_options", true);
+    xhr.send();
+};
+</script>
+
+<form id="myForm">
+    <div class="form-element">
+        <span>Operation:</span>
+        <select name="dropdown1">
+            <option value="">--Select--</option>
+            <option value="read">Read</option>
+            <option value="insert">Insert</option>
+            <option value="delete">Delete</option>
+            <option value="update">Update</option>
+            <option value="find">Find</option>
+            <option value="pincode">Pincode Statistics</option>
+            <option value="Number of buildings">Number of buildings</option>
+            <option value="Average Statistics">Average Statistics</option>
+            
+            <!-- Add more options as needed -->
+        </select>
+    </div>
+    <div class="form-element" >
+        <span>Number of records:</span>
+        <select name="dropdown2">
+          <option value="5">5</option>
+          <option value="15">15</option>
+          <option value="25">25</option>
+          <option value="50">50</option>
+          <option value="75">75</option>
+          <option value="100">100</option>
+          <option value="ALL">ALL</option>
+          <!-- Add more options as needed -->
+        </select>
+    </div>
+    <div class="form-element" >
+        <span>Table Names:</span>
+        <select name="dropdown3">
+        </select>
+    </div>
+    <div class="form-element" >
+      <input type="text" name="textfield" placeholder="where condition">
+    </div>
+
+    <div class="form-element" >
+        <input type="text" name="textfield_key" placeholder="Enter Key name">
+    </div>
+
+    <div class="form-element" >
+        <input type="text" name="textfield2" placeholder="Enter Column name">
+    </div>
+    
+    <div class="form-element" >
+        <input type="text" name="textfield3" placeholder="Enter text here">
+    </div>
+  
+    <div class="form-element" >
+        <input onclick = "action()" type="submit" value="Submit">
+    </div>
+</form>
+
+
+<div id="result"></div>
+
+<script src="{{url_for('static',filename='script.js')}}"></script>
+<script>
+
+
+function action(){
+    makeAjaxCall('POST','/submit')
+}
+function logout(){
+    makeAjaxCall('GET','/')
+}
+</script>
+</body>
+</html>
