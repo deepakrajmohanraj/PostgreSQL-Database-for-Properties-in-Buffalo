@@ -8,7 +8,7 @@ The database will contain over 90,000 rows of tax parcels in the city of Buffalo
 
 In this report, we will discuss the project description and problem statement, as well as the methods and technologies used to create the database. 
 
-Steps to Run the Project 
+## Steps to Run the Project 
 * Step 1: Run the whole load.ipynb file by keeping the dataset in the same directory. 
 * Step 2: Change the path to the dataset in the first cell to match your system. 
 * Step 3: The load.sql file contains all the database dump data load, which gets executed in the notebook. 
