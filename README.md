@@ -1,4 +1,4 @@
-# Database-for-Properties-in-Buffalo
+# Database for Properties in Buffalo
 
 ## Project Overview 
 
